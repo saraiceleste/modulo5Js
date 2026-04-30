@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro para conciertos</title>
+  <link rel="stylesheet" href="proyecto5.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registro para asistir a conciertos</h1>
+
+    <form id="registroConcierto">
+      <!-- 1. Datos del usuario -->
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefono">Teléfono (opcional)</label>
+      <input type="tel" id="telefono" name="telefono" />
+
+      <!-- 2. Intereses (checkboxes) -->
+      <label>Intereses musicales</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="intereses" value="Rock" /> Rock</label>
+        <label><input type="checkbox" name="intereses" value="Pop" /> Pop</label>
+        <label><input type="checkbox" name="intereses" value="Electrónica" /> Electrónica</label>
+        <label><input type="checkbox" name="intereses" value="Jazz" /> Jazz</label>
+        <label><input type="checkbox" name="intereses" value="Reggaetón" /> Reggaetón</label>
+      </div>
+
+      <!-- 3. Horario preferido (radio) -->
+      <label>Horario preferido</label>
+      <div class="radio-group">
+        <label><input type="radio" name="horario" value="Mañana" required /> Mañana (10:00–14:00)</label>
+        <label><input type="radio" name="horario" value="Tarde" /> Tarde (14:00–18:00)</label>
+        <label><input type="radio" name="horario" value="Noche" /> Noche (18:00–22:00)</label>
+      </div>
+
+      <!-- 4. Fecha del evento -->
+      <label for="fechaEvento">Fecha del concierto</label>
+      <input type="date" id="fechaEvento" name="fechaEvento" required />
+
+      <!-- 5. Subir archivo opcional (identificación) -->
+      <label for="identificacion">Identificación (opcional, máximo 5 MB)</label>
+      <input type="file" id="identificacion" name="identificacion" accept="image/*,pdf" />
+
+      <button type="submit" class="btn">Registrarme</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
