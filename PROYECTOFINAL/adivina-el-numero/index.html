@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+     <div id="app">
+    <h1>🎯 Adivina el Número Secreto</h1>
+    <p id="vidas">Vidas restantes: 10 ❤️</p>
+
+    <input type="number" id="numero" placeholder="Escribe aquí (1-1000)">
+    <button id="adivinar">Adivinar</button>
+    
+    <button id="reiniciar" style="display: none;">🔄 Volver a jugar</button>
+
+    <p id="mensaje">Escribe un número para empezar a jugar.</p>
+    <p id="historial">Id de números probados: Ninguno todavía</p>
+     </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
